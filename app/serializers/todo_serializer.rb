@@ -1,9 +1,6 @@
 class TodoSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
-  attributes :id, :title, :completed, :url
+  attributes :id, :title, :completed, :project_id 
 
-  def url
-    todo_url(object)
-  end
 end
