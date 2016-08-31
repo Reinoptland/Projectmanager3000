@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resources :todos
+
+   resources :projects do
+     resources :todos
+   end
+
 end
