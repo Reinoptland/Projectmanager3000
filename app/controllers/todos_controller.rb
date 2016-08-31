@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   before_action :load_todo, except: [:index, :create]
 
   def index
-    @todos = Todo.all
+    @todos = Todo.where(:project_id => (params[:project_id]))
     render json: @todos
   end
 
